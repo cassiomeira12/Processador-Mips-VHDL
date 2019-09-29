@@ -1,0 +1,28 @@
+
+State Machine - |Processador|UC:inst14|proximo_estado
+Name proximo_estado.fim_instrucao proximo_estado.passo_escrita proximo_estado.acesso_memoria_escrita proximo_estado.acesso_memoria_leitura proximo_estado.fim_instrucao_r proximo_estado.fim_desvio_incondicional proximo_estado.fim_desvio_condicional proximo_estado.execucao proximo_estado.calculo_endereco_memoria proximo_estado.decodificacao_instrucao proximo_estado.busca_instrucao 
+proximo_estado.busca_instrucao 0 0 0 0 0 0 0 0 0 0 0 
+proximo_estado.decodificacao_instrucao 0 0 0 0 0 0 0 0 0 1 1 
+proximo_estado.calculo_endereco_memoria 0 0 0 0 0 0 0 0 1 0 1 
+proximo_estado.execucao 0 0 0 0 0 0 0 1 0 0 1 
+proximo_estado.fim_desvio_condicional 0 0 0 0 0 0 1 0 0 0 1 
+proximo_estado.fim_desvio_incondicional 0 0 0 0 0 1 0 0 0 0 1 
+proximo_estado.fim_instrucao_r 0 0 0 0 1 0 0 0 0 0 1 
+proximo_estado.acesso_memoria_leitura 0 0 0 1 0 0 0 0 0 0 1 
+proximo_estado.acesso_memoria_escrita 0 0 1 0 0 0 0 0 0 0 1 
+proximo_estado.passo_escrita 0 1 0 0 0 0 0 0 0 0 1 
+proximo_estado.fim_instrucao 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Processador|UC:inst14|estado_atual
+Name estado_atual.fim_instrucao estado_atual.passo_escrita estado_atual.acesso_memoria_escrita estado_atual.acesso_memoria_leitura estado_atual.fim_instrucao_r estado_atual.fim_desvio_incondicional estado_atual.fim_desvio_condicional estado_atual.execucao estado_atual.calculo_endereco_memoria estado_atual.decodificacao_instrucao estado_atual.busca_instrucao 
+estado_atual.busca_instrucao 0 0 0 0 0 0 0 0 0 0 0 
+estado_atual.decodificacao_instrucao 0 0 0 0 0 0 0 0 0 1 1 
+estado_atual.calculo_endereco_memoria 0 0 0 0 0 0 0 0 1 0 1 
+estado_atual.execucao 0 0 0 0 0 0 0 1 0 0 1 
+estado_atual.fim_desvio_condicional 0 0 0 0 0 0 1 0 0 0 1 
+estado_atual.fim_desvio_incondicional 0 0 0 0 0 1 0 0 0 0 1 
+estado_atual.fim_instrucao_r 0 0 0 0 1 0 0 0 0 0 1 
+estado_atual.acesso_memoria_leitura 0 0 0 1 0 0 0 0 0 0 1 
+estado_atual.acesso_memoria_escrita 0 0 1 0 0 0 0 0 0 0 1 
+estado_atual.passo_escrita 0 1 0 0 0 0 0 0 0 0 1 
+estado_atual.fim_instrucao 1 0 0 0 0 0 0 0 0 0 1 

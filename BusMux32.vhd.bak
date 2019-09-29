@@ -1,0 +1,14 @@
+--Projeto de Circuitos Digitais
+--Alunos: Cassio Meira Silva
+--		  	 Dionleno Silva Oliveira
+--Inicio  28/03/18
+--Termino 28/03/18
+
+library IEEE; --Adicionadno Biblioteca IEEE
+use IEEE.std_logic_1164.all; --Incluindo toda a biblioteca do padrao 1164
+
+entity BusMux32 is
+port (
+
+		);
+end BusMux32;

@@ -1,0 +1,36 @@
+--Projeto de Circuitos Digitais
+--Alunos: Cassio Meira Silva
+--		  	 Dionleno Silva Oliveira
+--Inicio  08/05/18
+--Termino xx/xx/18
+
+library IEEE; --Adicionadno Biblioteca IEEE
+use IEEE.std_logic_1164.all; --Incluindo toda a biblioteca do padrao 1164
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity MemoriaInstrucao is
+port(
+		endereco_leitura : in std_logic_vector(31 downto 0);
+		instrucao : out std_logic_vector(31 downto 0)
+	);
+end MemoriaInstrucao;
+
+architecture hardware of MemoriaInstrucao is
+	signal endereco : std_logic_vector(5 downto 0);
+	--signal 
+begin
+
+	process(endereco)
+	begin
+		case (endereco) is
+			when 	"000000" => instrucao <= "001000" & "00001" & "00001" & x"0005"; -- addi $1, $1, 5
+			when 	"000001" => instrucao <= "101011" & "00000" & "00001" & x"0000"; -- sw $1, 0($0)
+			when 	"000010" => instrucao <= "100101" & "00000" & "00010" & x"0000"; -- lw $2, 0($0)
+			when 	"000011" => instrucao <= "001000" & "00010" & "00100" & x"0005"; -- addi $4, $2, 5
+			when  "000100" => instrucao <= "101011" & "00000" & "00100" & x"0008"; -- sw $4, 8($0)
+			when others => instrucao <= (others => 'X');
+		end case;
+	end process;
+
+end hardware;

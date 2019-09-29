@@ -1,0 +1,46 @@
+--Projeto de Circuitos Digitais
+--Alunos: Cassio Meira Silva
+--		  	 Dionleno Silva Oliveira
+--Inicio  28/03/18
+--Termino 28/03/18
+
+library IEEE; --Adicionadno Biblioteca IEEE
+use IEEE.std_logic_1164.all; --Incluindo toda a biblioteca do padrao 1164
+
+entity OperacaoULA is
+port(
+		ULAOp: in std_logic_vector(1 downto 0);
+		Instrucao: in std_logic_vector(5 downto 0);
+		Operacao: out std_logic_vector(2 downto 0)
+	  );
+end OperacaoULA;
+
+architecture hardware of OperacaoULA is
+begin
+	
+	process(ULAOp, Instrucao)
+	begin 
+	
+		case ULAOp is
+		
+			when "00" => Operacao <= "010";	
+			when "01" => Operacao <= "110";			
+			when "10" => 
+				case Instrucao is
+					
+					when "100000" => Operacao <= "010";
+					when "100010" => Operacao <= "110";
+					when "100100" => Operacao <= "000";
+					when "100101" => Operacao <= "001";
+					when "101010" => Operacao <= "111";
+					when others => Operacao <= "XXX";	
+				end case;
+				
+			when others => Operacao <= "XXX";
+			
+		end case;
+	
+	end process;
+
+
+end hardware;

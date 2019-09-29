@@ -1,0 +1,22 @@
+--Projeto de Circuitos Digitais
+--Alunos: Cassio Meira Silva
+--		  	 Dionleno Silva Oliveira
+--Inicio  28/03/18
+--Termino 28/03/18
+
+library IEEE; --Adicionadno Biblioteca IEEE
+use IEEE.std_logic_1164.all; --Incluindo toda a biblioteca do padrao 1164
+
+entity Concatenador is
+port(
+		ULAOp: in std_logic_vector(1 downto 0);
+		Instrucao: in std_logic_vector(5 downto 0);
+		Operacao: out std_logic_vector(2 downto 0)
+	  );
+end Concatenador;
+
+architecture hardware of Concatenador is
+begin
+
+
+end hardware;

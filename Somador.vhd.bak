@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+--use work.p_MI0.all;
+
+entity Somador is
+	port(
+			input1 : in std_logic_vector(31 downto 0);
+			input2 : in std_logic_vector(31 downto 0);
+			result : out std_logic_vector(31 downto 0)
+		);
+end Somador;
+
+architecture hardware of Somador is 
+begin
+	
+	result <= input1 + input2;
+
+end hardware;
